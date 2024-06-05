@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  artemis:
+    image: quay.io/artemiscloud/activemq-artemis-broker
+    container_name: artemis
+    environment:
+      AMQ_USER: "admin"
+      AMQ_PASSWORD: "admin"
+    ports:
+      - "8161:8161"  # Management Console
+      - "61616:61616"  # Core, OpenWire, AMQP, MQTT, Stomp
+      - "61613:61613"  # Stomp
+    volumes:
+      - ./broker.xml:/opt/amq/conf/broker.xml
+      - ./bootstrap.xml:/opt/amq/conf/bootstrap.xml

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<configuration xmlns="urn:activemq" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:activemq /schema/artemis-configuration.xsd">
+    <core xmlns="urn:activemq:core" xsi:schemaLocation="urn:activemq:core ">
+        <address-settings>
+            <address-setting match="#">
+                <expiry-delay>300000</expiry-delay>
+                <auto-delete-addresses>true</auto-delete-addresses>
+                <auto-delete-addresses-delay>30000</auto-delete-addresses-delay>
+                <auto-delete-queues>true</auto-delete-queues>
+                <auto-delete-created-queues>true</auto-delete-created-queues>
+                <auto-delete-queues-delay>30000</auto-delete-queues-delay>
+                <auto-delete-queues-message-count>-1</auto-delete-queues-message-count>
+            </address-setting>
+        </address-settings>
+    </core>
+</configuration>
